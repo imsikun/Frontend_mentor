@@ -16,5 +16,102 @@
   --white: hsl(0, 0%, 100%);
   --main-paragraph: hsla(0, 0%, 100%, 0.75);
   --stat-heading: hsla(0, 0%, 100%, 0.6);
+  --font-size: 15px;
+  --heading-font: 'Inter', sans-serif;
+  --text-font: 'Lexend Deca', sans-serif;
 }
 /* universal styling */
+
+body,
+html {
+  background-color: var(--main-background);
+}
+.parent_box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child_box {
+  width: 60vw;
+  height: 43vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  background-color: var(--card-background);
+}
+.l-content {
+  padding: 40px;
+  width: 20vw;
+  text-justify: distribute-all-lines;
+}
+.l-content .heading {
+  width: 25vw;
+  color: var(--white);
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.l-content .heading span {
+  color: var(--accent);
+}
+.l-content .desc {
+  width: 25vw;
+  line-height: 1.5;
+  color: var(--main-paragraph);
+  font-family: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-family: var(--text-font);
+  font-weight: 200;
+}
+.numbers {
+  width: 20vw;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.numbers p {
+  color: var(--white);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.numbers span {
+  text-transform: capitalize;
+  color: var(--stat-heading);
+  font-family: var(--text-font);
+  font-size: 15px;
+  font-weight: 200;
+}
+.r-content {
+  position: relative;
+}
+.r-content .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  display: block;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.r-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* footer */
