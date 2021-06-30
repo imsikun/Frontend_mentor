@@ -116,3 +116,40 @@ html {
   color: hsl(228, 45%, 44%);
 }
 /* footer */
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .child_box {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    justify-content: center;
+    min-height: 100px;
+  }
+  .l-content {
+    padding: 0px;
+    width: inherit;
+  }
+  .l-content .heading {
+    width: 40vw;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .l-content .desc {
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .numbers {
+    width: 40vw;
+    text-align: center;
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/* responsive */
