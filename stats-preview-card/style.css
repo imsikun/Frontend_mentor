@@ -25,6 +25,7 @@
 body,
 html {
   background-color: var(--main-background);
+  overflow-x: hidden;
 }
 .parent_box {
   width: 100vw;
@@ -41,6 +42,7 @@ html {
   justify-content: space-between;
   color: #fff;
   background-color: var(--card-background);
+  border-radius: 10px;
 }
 .l-content {
   padding: 40px;
@@ -99,11 +101,12 @@ html {
   display: none;
   display: block;
   background: var(--accent);
-  opacity: 0.6;
+  opacity: 0.75;
 }
 .r-content img {
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
 }
 
 /* footer */
@@ -124,7 +127,10 @@ html {
     flex-direction: column;
     flex-flow: column-reverse;
     justify-content: center;
-    min-height: 100px;
+    width: 50vw;
+    height: 80vh;
+    height: 90%;
+    margin-top: 3rem;
   }
   .l-content {
     padding: 0px;
@@ -146,10 +152,19 @@ html {
     width: 40vw;
     text-align: center;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .r-content .after {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0.75;
+  }
+  .numbers div {
+    margin: 20px;
   }
 }
 /* responsive */
