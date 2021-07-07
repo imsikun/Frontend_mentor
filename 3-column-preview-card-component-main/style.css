@@ -236,4 +236,34 @@ p {
     border-top-right-radius: 0px;
   }
 }
+@media screen and (max-width: 370px) {
+  .parent_box {
+    padding: 20px;
+  }
+  .card {
+    max-width: 90%;
+  }
+  h3 {
+    margin-top: 1.6rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  .child_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  .card:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}
 /* media query */
