@@ -27,6 +27,8 @@
 body,
 html {
   background-color: var(--very-light-gray);
+  overflow-x: hidden;
+  padding: 5px;
 }
 
 .parent_box {
@@ -140,19 +142,21 @@ p {
   .card:first-child {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
   }
   .card:last-child {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
   }
 }
 
-@media screen and(max-width:630px) {
-  body {
-    background-color: rebeccapurple;
-  }
+@media screen and (max-width: 630px) {
   .parent_box {
     padding: 20px;
+  }
+  .card {
+    max-width: 50%;
   }
   .child_box {
     display: flex;
@@ -163,10 +167,36 @@ p {
   .card:first-child {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
   }
   .card:last-child {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .parent_box {
+    padding: 20px;
+  }
+  .card {
+    max-width: 60%;
+  }
+  .child_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  .card:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
   }
 }
 /* media query */
