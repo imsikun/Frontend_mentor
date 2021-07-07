@@ -175,7 +175,7 @@ p {
     border-top-right-radius: 0px;
   }
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 450px) {
   .parent_box {
     padding: 20px;
   }
