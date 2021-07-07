@@ -17,7 +17,7 @@
   --very-light-gray: hsl(0, 0%, 95%);
   --font-size: 0.9375rem;
   --padding: 40px;
-  --h3-font: 1.7rem;
+  --h3-font: 2.1rem;
   --h3-font-color: #fff;
   --first-font: 'Big Shoulders Display', cursive;
   --second-font: 'Lexend Deca', sans-serif;
@@ -31,7 +31,7 @@ html {
 
 .parent_box {
   min-height: 100vh;
-  max-width: 100vw;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@ html {
 
 .child_box {
   max-width: 55em;
-  min-height: 46vh;
+  min-height: 50vh;
   display: flex;
 }
 
@@ -49,15 +49,14 @@ h3 {
   font-family: var(--first-font);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3;
   margin-top: 2rem;
 }
 p {
   font-size: var(--font-size);
   color: var(--trans-white-paragraph);
   font-family: var(--second-font);
-  /* font-weight: 400; */
-  margin-top: 2.4rem;
+  font-weight: 400;
+  margin-top: 2rem;
   line-height: 1.6;
 }
 .btn {
@@ -70,7 +69,7 @@ p {
   border-radius: 50px;
   font-family: var(--second-font);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
 }
@@ -84,29 +83,33 @@ p {
   color: var(--very-dark-cyan);
 }
 
-/* boxex */
-.first_box {
-  background-color: var(--bright-orange);
-  min-height: inherit;
+.card {
   max-width: 33.3%;
   padding: var(--padding);
   position: relative;
+  min-height: inherit;
+}
+
+.card:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.card:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* boxex */
+.first_box {
+  background-color: var(--bright-orange);
 }
 
 .second_box {
   background-color: var(--dark-cyan);
-  min-height: inherit;
-  max-width: 33.3%;
-  padding: var(--padding);
-  position: relative;
 }
 
 .third_box {
   background-color: var(--very-dark-cyan);
-  min-height: inherit;
-  max-width: 33.3%;
-  padding: var(--padding);
-  position: relative;
 }
 /* boxex */
 
@@ -121,13 +124,49 @@ p {
 /* footer */
 
 /* media query */
-@media screen and (max-width: 1200px) and (min-width: 768px) {
+@media screen and (max-width: 900px) and (min-width: 630px) {
   .parent_box {
-    display: flex;
+    padding: 20px;
   }
   .child_box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    max-width: 50%;
+  }
+  .card:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .card:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+@media screen and(max-width:630px) {
+  body {
+    background-color: rebeccapurple;
+  }
+  .parent_box {
+    padding: 20px;
+  }
+  .child_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .card:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
 /* media query */
