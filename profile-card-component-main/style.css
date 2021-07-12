@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: #fff;
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --font-size: 1.125rem;
+  --fonts: 'Kumbh Sans', sans-serif;
+}
+/* global */
+
+body {
+  background-color: var(--dark-cyan);
+  overflow-x: hidden;
+}
+.parent {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  position: absolute;
+  left: 0;
+  top: -50%;
+}
+.bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 50%;
+}
+.child {
+  min-width: 30em;
+  min-height: 50vh;
+  z-index: 1000;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.top-div {
+  min-height: 12em;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  width: inherit;
+  background-image: url('./images/bg-pattern-card.svg');
+  object-fit: cover;
+}
