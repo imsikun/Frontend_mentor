@@ -60,7 +60,7 @@ body {
 }
 .child_box .avatar {
   position: absolute;
-  top: 37%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -69,7 +69,7 @@ body {
   border: 3px solid #fff;
 }
 .body {
-  margin-top: 4em;
+  margin-top: 5.2em;
 }
 
 .info {
