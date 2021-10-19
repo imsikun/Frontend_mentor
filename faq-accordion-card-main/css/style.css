@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --primary-font:12px;
+  --divider-color:#14141f;
+  --very-dark-gray-blue: #4a4b5e;
+  --dark-grey-blue:#787887;
+  --very-dark-desaturated-blue:#1d1e35;
+  --soft-red: #f47c57;
+  --background-soft-violet:#af67e9;
+  --background-soft-blue:#6565e7;
+  --primary_font_family: 'Kumbh Sans', sans-serif;
+}
+
+
+body{
+  background-image: linear-gradient(to bottom, var(--background-soft-violet), var(--background-soft-blue));
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card{
+  width: inherit;
+  height: 60%;
+  background-color:#fff;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.left .graphic{
+  background-color: #fff;
+  overflow: hidden;
+  position:fixed;
+}
+
+
+.women{
+  position: absolute;
+  top: 32%;
+  left: 16%;
+  overflow: hidden;
+}
+.box{
+  position: absolute;
+  top: 42%;
+  left: 15%;
+
+}
+ .pattern{
+  position: absolute;
+  top: -6%;
+  left: -8%;
+  overflow: hidden !important;
+}
+.right h3{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.right{
+  margin-right: 40px;
+}
+.accordion{
+  width: 100%;
+  border-bottom: 1px solid var(--divider-color);
+  outline: none;
+  text-align: left;
+  padding: 15px 3px;
+  font: size 1.3rem;
+  font-family:var(--primary_font_family);
+  font-weight: 400;
+  color:var(--very-dark-gray-blue);
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.accordion::after{
+  font-family: FontAwesome;
+  content: "\f107";
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+  color: var(--soft-red);
+}
+.accordion.is-open::after{
+  content: '\f106';
+}
+.accordion_content{
+  background-color: white;
+  padding: -2px 40px;
+  max-height: 0;
+  font-family: var(--primary_font_family);
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
