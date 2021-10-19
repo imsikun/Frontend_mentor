@@ -94,7 +94,6 @@ body{
 .accordion::after{
   font-family: FontAwesome;
   content: "\f107";
-  font-family: "fontawesome";
   font-size: 14px;
   float: right;
   color: var(--soft-red);
